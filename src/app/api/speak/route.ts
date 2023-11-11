@@ -2,6 +2,7 @@ import { TextToSpeechClient } from '@google-cloud/text-to-speech'
 import fs from 'fs'
 import { NextRequest, NextResponse } from 'next/server'
 import util from 'util'
+import { put } from '@vercel/blob'
 
 export async function POST (req: NextRequest) {
   try {
@@ -25,10 +26,12 @@ export async function POST (req: NextRequest) {
     }
 
     const [response] = await client.synthesizeSpeech(request)
-    const writeFile = util.promisify(fs.writeFile)
-    await writeFile('public/output.mp3', response.audioContent!, 'binary')
 
-    const res = new NextResponse(JSON.stringify({ audioUrl: '/output.mp3' }))
+    const blob = await put('audio' + new Date(), response.audioContent!, {
+      access: 'public'
+    })
+    console.log(blob.url)
+    const res = new NextResponse(JSON.stringify({ audioUrl: blob.url }))
     return res
   } catch (error) {
     console.error('Error:', error)
