@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { Providers } from './providers'
+import { Providers } from '../compenents/providers'
+import 'regenerator-runtime/runtime'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,9 +18,6 @@ export default function RootLayout ({
 }) {
   return (
     <html lang='en'>
-      <head>
-        <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-      </head>
       <body className={inter.className}>
         <Providers>{children}</Providers>
       </body>

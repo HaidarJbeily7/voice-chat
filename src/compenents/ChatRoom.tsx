@@ -14,7 +14,7 @@ import {
 import SpeechToText from './SpeechToText'
 import { m } from 'framer-motion'
 
-const synth = window.speechSynthesis
+// const synth = window.speechSynthesis
 
 const ChatRoom = () => {
   const [messages, setMessages] = useState<string[]>([])
@@ -26,8 +26,8 @@ const ChatRoom = () => {
   useEffect(() => {
     setName(localStorage.getItem('name') || '')
   }, [name])
-  if (!synth)
-    return <span>Aw... your browser does not support Speech Synthesis</span>
+  //   if (!synth)
+  //     return <span>Aw... your browser does not support Speech Synthesis</span>
 
   const speak = (msg: string) => {
     const synth = window.speechSynthesis
