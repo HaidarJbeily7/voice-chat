@@ -16,7 +16,11 @@ import { m } from 'framer-motion'
 
 // const synth = window.speechSynthesis
 
-const ChatRoom = () => {
+const ChatRoom = ({
+  setIsSpeaking
+}: {
+  setIsSpeaking: (falg: boolean) => void
+}) => {
   const [messages, setMessages] = useState<string[]>([])
   const [newMessage, setNewMessage] = useState('')
   const toast = useToast()
@@ -41,7 +45,14 @@ const ChatRoom = () => {
 
       const { audioUrl } = await res.json()
       const audio = new Audio(audioUrl)
-      audio.play()
+      audio.onloadedmetadata = () => {
+        console.log(audio.duration)
+        setIsSpeaking(true)
+        setTimeout(() => {
+          setIsSpeaking(false)
+        }, audio.duration * 1000)
+        audio.play()
+      }
     } catch (error) {
       console.error('Error:', error)
     }
@@ -90,7 +101,7 @@ const ChatRoom = () => {
   }
 
   return (
-    <Container maxW='container.md' p={4}>
+    <Container maxW='container.md' p={1}>
       <HStack
         w='full'
         dir='rtl'
@@ -115,7 +126,7 @@ const ChatRoom = () => {
       <VStack spacing={4}>
         <Box
           w='full'
-          h='400px'
+          height={'70vh'}
           p={4}
           overflowY='auto'
           bg='gray.100'
