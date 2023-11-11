@@ -6,7 +6,17 @@ import util from 'util'
 export async function POST (req: NextRequest) {
   try {
     const { text } = await req.json()
-    const client = new TextToSpeechClient()
+    const credential = JSON.parse(
+      Buffer.from(process.env.GOOGLE_SERVICE_KEY!, 'base64').toString()
+    )
+
+    const client = new TextToSpeechClient({
+      projectId: credential.projectId,
+      credentials: {
+        client_email: credential.client_email,
+        private_key: credential.private_key
+      }
+    })
 
     const request = {
       input: { text: text },
