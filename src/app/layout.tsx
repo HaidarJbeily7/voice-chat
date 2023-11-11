@@ -7,8 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Voice Chat App',
-  description: 'A voice chat app',
-  contentType: 'text/html'
+  description: 'A voice chat app'
 }
 
 export default function RootLayout ({

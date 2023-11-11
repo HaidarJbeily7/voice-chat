@@ -49,7 +49,7 @@ const ChatRoom = () => {
       })
       const { reply } = await res.json()
       setMessages([...messages, newMessage, reply])
-      speak(reply)
+      //   speak(reply)
     } catch (error) {
       toast({
         title: 'حدث خطأ أثناء المحاولة',
