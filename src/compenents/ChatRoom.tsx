@@ -29,12 +29,22 @@ const ChatRoom = () => {
   //   if (!synth)
   //     return <span>Aw... your browser does not support Speech Synthesis</span>
 
-  const speak = (msg: string) => {
-    const synth = window.speechSynthesis
-    const utterance = new SpeechSynthesisUtterance(msg)
-    utterance.voice = synth.getVoices()[2]
-    utterance.lang = 'ar'
-    synth.speak(utterance)
+  const speak = async (msg: string) => {
+    try {
+      const res = await fetch('/api/speak', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ text: msg })
+      })
+
+      const { audioUrl } = await res.json()
+      const audio = new Audio(audioUrl)
+      audio.play()
+    } catch (error) {
+      console.error('Error:', error)
+    }
   }
 
   const askQuestion = async (message: string) => {
@@ -49,7 +59,7 @@ const ChatRoom = () => {
       })
       const { reply } = await res.json()
       setMessages([...messages, newMessage, reply])
-      //   speak(reply)
+      speak(reply)
     } catch (error) {
       toast({
         title: 'حدث خطأ أثناء المحاولة',

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "eduavatar-m-hamza",
+  "private_key_id": "321734316044ac329a37e0205c13b04315467f45",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDH2Da4eGM9RtYg\n+D+Ffp2fOAd9ffC+q6ZRAyu2M/qTmepZBhiJM7aMPP77h0e3sz1YnT/g8DgLK1BQ\nLfKaTLGFXtCu+TQT0GpVOoo/jG3cVWbBrndsXeUM79Dz3fMiCFyMqSyhGuyzW+ID\nN05r+N41DDmlq3zTsff9FF+zAaoOWENCczuFCgyLHnoATZubcS5Bw3HVPudP042Y\nZUDGuR9qAQ13GqSc+8Vz1WMc+39O9TIahOIpyJYcEgphLoA8HDGxNsBO8Lndc7FS\nb2Ml0GCXElPAPw4myheDRSPSgxEw43hQG1K9Rez34jmy5XExKs3mPFq5qkjG6rgE\n/M+ylFgxAgMBAAECggEAG9cpOGW9HYpCxnEPGF/dQZMip/7ljQqIrvyMGGQBYpKs\nrR5GSMblhX/x3cSo3xSfVTsC7SlKBXRRSfo8s/Y/PN9KnzWkZaZBSgJPxC6iF3Hm\nUNEnXfdus3CtYWvoNTOJASeISiFgHFSOlfgcero+6pD7bvMG/s7qR12RP3TZ5gly\ns9BxhmD43rSrV00ogF2eH2b6fRKzRY3KkLlcfwoP8vZxLEvCO5EdmY67lGbRgPPA\nWqrpoaZF4TpXP38rDOmJMViRkkl8WbDzZhz1idXAsgHtyTP9aQiPuthm5iMmHUuj\nLfIGEIIChPSx4HLRQLQRvBC150Qr5hxx66ehrh5HCQKBgQDrGQORPjrXPZMj27Nd\n6o4lVyAqELQsf1zA6iWTAbGZHNfkrFUzMKLcnW42GOcCoAzriYKELXBq5gzIAE5G\nURcACrxnB7tHP8yPM4X/e8iyM4z3QCcBqCGVTuEeIDf42PEZuAngr7pN5meBlQ5k\niclq0yBGRvp5nTNLRzWZgdK2wwKBgQDZnNB5zSkRTy75KkCh6tAfYCXyeGjZM7Gf\nd3Y1lNeMqmixYSYNV2Rfe0P7hcd+UOJLbv1sfo/spBjfoMtLIcr7LEntTWdlZ4AS\nY4rLRpDkLNOY3ZVsh3aiEvbJrU0NAM6iSvtn//jj5/JsmjQXtv1GIlnEeu2hrNG5\nkQowQMvN+wKBgQC8oc1i9HNx0E4HL3izmkeDXmzIU669JVPe1gBf+7PsDmCLclrK\nP/Ps38RWU5THXnP/aM34EB1rKDqJHvWvJdE2j2arpGB3wpD3NXgGjeNyWDp7CFZD\n1gtcKXYnHeLLIAYThL8oMNdjOcNDDb4GnSenNs9mk/zVJ3TIqdIv4SKY0QKBgD5h\noLW55VLr8xhET4DbEkxcQKSQdeYF1p5THZTglSXi1945bjIW4lQovuVEhVqljyl2\nqLlIUrPQmrzImF5yUoDMQmj/bmt4TxN2a5w4H2L5orLImoQhFRYC/7HytwrKN3H4\nsrcufse+fxU440QFFffb8wXLA4H8S6a5eEU63fGvAoGBAI0KxhEWFb6gYN/YVYHM\n3m55NmrMK9n/syY4C4kMr+Bhg92ER9Ux3+BJHdfA8xftRvQsDMH66DeEw3l4ciT+\nMw+PCfXxJDFBk34dGIwh+hR+DpTUlOH5u8U6W/a2faDM5iAKAJqeOw4afy0b6T8O\n9hNPDbe95rboKVc0OnwYgss8\n-----END PRIVATE KEY-----\n",
+  "client_email": "testing-service@eduavatar-m-hamza.iam.gserviceaccount.com",
+  "client_id": "112529933240335460312",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/testing-service%40eduavatar-m-hamza.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
