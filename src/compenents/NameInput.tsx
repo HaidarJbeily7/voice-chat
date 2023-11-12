@@ -9,6 +9,7 @@ import {
   useToast,
   Flex
 } from '@chakra-ui/react'
+import 'regenerator-runtime/runtime'
 
 export default function NameInput ({
   setLogged

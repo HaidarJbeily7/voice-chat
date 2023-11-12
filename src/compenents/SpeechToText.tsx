@@ -6,6 +6,7 @@ import SpeechRecognition, {
 } from 'react-speech-recognition'
 import { Icon } from '@chakra-ui/react'
 import { LuMicOff, LuMic } from 'react-icons/lu'
+import 'regenerator-runtime/runtime'
 
 const SpeechToText = ({
   setNewMessage

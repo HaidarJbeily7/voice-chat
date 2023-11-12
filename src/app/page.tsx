@@ -4,6 +4,7 @@ import { Container, Flex, Box, AspectRatio } from '@chakra-ui/react'
 import ChatRoom from '@/compenents/ChatRoom'
 import { useEffect, useRef, useState } from 'react'
 import NameInput from '@/compenents/NameInput'
+import 'regenerator-runtime/runtime'
 
 export default function Home () {
   const [logged, setLogged] = useState<boolean>(false)

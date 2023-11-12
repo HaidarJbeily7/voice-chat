@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
+import 'regenerator-runtime/runtime'
 
 export default function Navbar () {
   const { colorMode, toggleColorMode } = useColorMode()
