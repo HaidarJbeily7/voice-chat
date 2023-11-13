@@ -25,25 +25,31 @@ export default function Home () {
       >
         {logged ? (
           <Flex
-            direction={['column', 'row']}
+            direction={{ base: 'column', md: 'row' }}
             justifyContent={'center'}
             alignContent={'center'}
             alignItems={'center'}
           >
             <Box flex={2}>
               {isSpeaking && (
-                <AspectRatio ratio={16 / 11.5}>
-                  <video className='VideoTag' autoPlay loop muted>
-                    <source src='/with-1.mp4' type='video/mp4' />
-                  </video>
-                </AspectRatio>
+                // <AspectRatio ratio={16 / 11.5}>
+                <video className='VideoTag' autoPlay loop muted>
+                  <source src='/with-1.mp4' type='video/mp4' />
+                </video>
+                // </AspectRatio>
               )}
               {!isSpeaking && (
-                <AspectRatio ratio={16 / 11.5}>
-                  <video className='VideoTag' autoPlay loop muted>
-                    <source src='/without.mp4' type='video/mp4' />
-                  </video>
-                </AspectRatio>
+                // <AspectRatio ratio={16 / 11.5}>
+                <video
+                  className='VideoTag'
+                  style={{ width: '100%' }}
+                  autoPlay
+                  loop
+                  muted
+                >
+                  <source src='/without.mp4' type='video/mp4' />
+                </video>
+                // </AspectRatio>
               )}
             </Box>
             <Box flex={1}>

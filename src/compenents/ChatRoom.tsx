@@ -126,7 +126,7 @@ const ChatRoom = ({
       <VStack spacing={4}>
         <Box
           w='full'
-          height={'70vh'}
+          height={{ base: '26vh', md: '40vh' }}
           p={4}
           overflowY='auto'
           bg='gray.100'
